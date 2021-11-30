@@ -1,12 +1,12 @@
 package Heranca_e_sobrescrita;
 
-public class TrianguloRetangulo extends Model{
+public class TrianguloRetangulo extends Area{
 
-	public TrianguloRetangulo(float base, float altura) {
+	public TrianguloRetangulo(double base, double altura) {
 		super(base, altura);
 	}
 	
-	public float area() {
+	public double area() {
 		return (this.base * this.altura / 2);
 	}
 	
