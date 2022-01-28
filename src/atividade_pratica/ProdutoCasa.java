@@ -1,5 +1,6 @@
 package atividade_pratica;
 
+// Herança
 public class ProdutoCasa extends Produto {
 	String cor;
 	String material;
@@ -18,7 +19,8 @@ public class ProdutoCasa extends Produto {
 	public String getMaterial() {
 		return this.material;
 	}
-
+	
+	// Sobrecarga
 	public void calcularDesconto(int tipoDesconto, double percentual) {
 		if (tipoDesconto == 1) {
 			this.preco = this.preco + (this.preco * (percentual / 100));
@@ -34,7 +36,7 @@ public class ProdutoCasa extends Produto {
 				+ " Disponibilidade: " + this.disponibilidade + " Preço: " + this.preco + " Cor: " + this.cor
 				+ " Material: " + this.material);
 	}
-
+	// Polimorfismo
 	public static void informarClasse() {
 		System.out.println("Este objeto pertence à classe ProdutoCasa");
 	}

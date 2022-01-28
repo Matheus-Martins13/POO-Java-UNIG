@@ -1,13 +1,14 @@
 package atividade_pratica;
-
+// Classe abstrata 
 public abstract class Produto implements Disponibilidade{
+	// Atributos
 	static int id;
 	String nome;
 	int quantidade;
 	double preco;
 	boolean disponibilidade;
 	
-	
+	// Construtores
 	public Produto(String nome, int quantidade, boolean disponibilidade, double preco) {
 		this.nome = nome;
 		this.quantidade = quantidade;
@@ -16,6 +17,7 @@ public abstract class Produto implements Disponibilidade{
 		Produto.id = Produto.acrescentaId();
 	}
 	
+	// Métodos	
 	public boolean getDisponibilidade() {
 		return this.disponibilidade;
 	}
@@ -32,7 +34,7 @@ public abstract class Produto implements Disponibilidade{
 			this.disponibilidade = true;
 		}
 	}
-	
+	// Modificadores de acesso
 	public void calcularDesconto(int tipoDesconto, double quantidade) {
 		if (tipoDesconto == 1) {
 			this.preco += quantidade;
